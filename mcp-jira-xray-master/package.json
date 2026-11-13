@@ -1,0 +1,31 @@
+{
+  "name": "mcp-jira-xray",
+  "version": "1.0.0",
+  "description": "MCP server for extracting test information from Jira Xray",
+  "type": "module",
+  "bin": {
+    "mcp-jira-xray": "./build/index.js",
+    "mcp-jira-xray-setup": "./build/setup.js",
+    "mcp-jira-xray-validate": "./build/validate.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js && chmod +x build/setup.js && chmod +x build/validate.js",
+    "prepare": "npm run build",
+    "setup": "node build/setup.js",
+    "validate": "node build/validate.js"
+  },
+  "keywords": ["mcp", "jira", "xray", "testing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3"
+  },
+  "files": ["build"]
+}
